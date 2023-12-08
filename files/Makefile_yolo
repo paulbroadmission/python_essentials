@@ -1,0 +1,10 @@
+CC=g++
+CPPFLAGS=-I./darknet/include/ -I./darknet/src/ -L./darknet/ -ldarknet -lstdc++ -lm -lpthread
+OPENCVFLAGS=`pkg-config --cflags --libs opencv`
+CUDAFLAGS=-lcuda -lcudart -lcublas -lcurand
+ALLFLAGS=$(CPPFLAGS) $(OPENCVFLAGS) $(CUDAFLAGS)
+
+all: yolo_inference
+
+yolo_inference: yolo_inference.cpp
+    $(CC) yolo_inference.cpp -o yolo_inference $(ALLFLAGS)
