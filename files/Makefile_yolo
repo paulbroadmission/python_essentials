@@ -7,4 +7,4 @@ ALLFLAGS=$(CPPFLAGS) $(OPENCVFLAGS) $(CUDAFLAGS)
 all: yolo_inference
 
 yolo_inference: yolo_inference.cpp
-    $(CC) yolo_inference.cpp -o yolo_inference $(ALLFLAGS)
+	$(CC) yolo_inference.cpp -o yolo_inference $(ALLFLAGS)
