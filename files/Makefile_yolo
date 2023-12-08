@@ -1,6 +1,6 @@
 CC=g++
 CPPFLAGS=-I./darknet/include/ -I./darknet/src/ -L./darknet/ -ldarknet -lstdc++ -lm -lpthread
-OPENCVFLAGS=`pkg-config --cflags --libs opencv`
+OPENCVFLAGS=`pkg-config --cflags --libs opencv4`
 CUDAFLAGS=-lcuda -lcudart -lcublas -lcurand
 ALLFLAGS=$(CPPFLAGS) $(OPENCVFLAGS) $(CUDAFLAGS)
 
